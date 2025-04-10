@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image";
+
+
 import user_image from "./user-image.png";
 import code_icon from "./code-icon.png";
 import code_icon_dark from "./code-icon-dark.png";
@@ -84,7 +87,28 @@ export const assets = {
   web_app_developer,
 };
 
-export const workData = [
+interface WorkItem {
+  title: string;
+  description: string;
+  bgImage: string;
+}
+
+interface ServiceItem {
+  icon: StaticImageData;
+  title: string;
+  description: string;
+  link: string;
+}
+
+interface InfoItem {
+  icon: StaticImageData;
+  iconDark: StaticImageData;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const workData: WorkItem[] = [
   {
     title: "Frontend project",
     description: "Web Design",
@@ -107,7 +131,7 @@ export const workData = [
   },
 ];
 
-export const serviceData = [
+export const serviceData: ServiceItem[] = [
   {
     icon: assets.web_app_developer,
     title: "Web app Developer",
@@ -123,7 +147,7 @@ export const serviceData = [
   },
 ];
 
-export const infoList = [
+export const infoList: InfoItem[] = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
@@ -147,7 +171,7 @@ export const infoList = [
   },
 ];
 
-export const toolsData = [
+export const toolsData: StaticImageData[] = [
   assets.vscode,
   assets.dbeaver,
   assets.mysql,
