@@ -9,7 +9,7 @@ interface AboutProps {
   isDarkMode: boolean;
 }
 
-const Header : React.FC<AboutProps> = ({ isDarkMode }) => {
+const Header: React.FC<AboutProps> = ({ isDarkMode }) => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
@@ -61,7 +61,7 @@ const Header : React.FC<AboutProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.6, delay: 1.2 }}
           href="/sample-resume.pdf"
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
+          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 text-black bg-white dark:text-white dark:bg-black"
         >
           my resume <Image src={assets.download_icon} alt="" className=" w-4" />
         </motion.a>
